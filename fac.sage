@@ -1,4 +1,4 @@
-from fpylll import IntegerMatrix, SVP
+from fpylll import IntegerMatrix, SVP, BKZ
 import sys
 
 def svp(B):
@@ -37,7 +37,8 @@ def test_Schnorr(N, n, prec=1000):
 	for i in range(n):
 		B[i, n] = sr(N*ln(P[i]))
 
-
+	block_size = 32
+	B_bkz = BKZ.reduction(B, BKZ.Param(block_size))
 	b = svp(B)
 	e = [b[i] / sr(N*f[i]) for i in range(n)]
 
