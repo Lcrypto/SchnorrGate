@@ -1,6 +1,6 @@
-# SchnorrGate
+# SchnorrGate Original 
 ## Testing Schnorr's factoring Claim in SageMath [Sage]
-
+###  reposite not doing described in article step of BKZ reduction ( A.BKZ(fp="fp",block_size=32))  with size 32 before use SVP  , read    New Enum for SVP at page 5  https://eprint.iacr.org/2021/933
 [Sch21] <br />
 **Fast Factoring Integers by SVP Algorithms** <br />
 _Claus Peter Schnorr_ <br />
